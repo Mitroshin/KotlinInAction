@@ -165,3 +165,21 @@ ________________________________________________________________________________
             -> example9.getWarmth()
         
             You can also combine multiple value in the same branch if you separate them with commas.
+            
+        2.3.3 Using "when" with arbitrary object
+        
+            Unlike "switch", which requires yo to use constants (enum constants, string, or number literals) as branch
+            conditions, "when" allows any objects.
+        
+            -> example9.mix()
+        
+            An argument of the when expression can be any object.
+                |   when (setOf(color1, color2))
+        
+            Executed if none of the other branches were matched.
+                |   else -> throw Exception("Dirty color")
+        
+            The Kotlin standard library contains a function "setOf()" that create a "Set" containing the objects
+            specified as its arguments. A "Set" is a collection for which the order of items doesn't matter; two sets
+            are equal if they contain the same items.
+                |   setOf(color1, color2)

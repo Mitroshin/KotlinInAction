@@ -25,3 +25,11 @@ fun getWarmth(color: Color1) = when (color) {
     GREEN -> "neutral"
     BLUE, INDIGO, VIOLET -> "cold"
 }
+
+fun mix(color1: Color1, color2: Color1) = when (setOf(color1, color2)) {
+    setOf(RED, YELLOW) -> ORANGE
+    setOf(YELLOW, BLUE) -> GREEN
+    setOf(BLUE, VIOLET) -> INDIGO
+
+    else -> throw Exception("Dirty color")
+}
