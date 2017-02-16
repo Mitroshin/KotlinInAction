@@ -253,3 +253,5 @@ ________________________________________________________________________________
             The rule "the last expression in a block is the result" holds in all cases where a block can be used and a
             result is expected. But this rule doesn't hold for regular function.
 ________________________________________________________________________________________________________________________
+
+    2.4 Iterating over things: "while" and "for" loops
