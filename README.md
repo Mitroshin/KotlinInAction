@@ -115,3 +115,21 @@ ________________________________________________________________________________
         
             The property "isSquare" doesn't need a field to store its value. It only has a custom getter with the
             implementation provided.
+            
+        2.2.3 Kotlin source code layout: directories and package
+        
+            -> geometry.shapes.example7
+        
+            Every Kotlin file can have a "package" statement at the beginning, and all declarations defined in the file
+            will be placed in that package. Declarations defined in other files can be used directly if they're in the
+            same package; they need to be imported if they're in a different package.
+        
+            -> geometry.example.example8
+        
+            Kotlin doesn't make a distinction between importing classes and methods. You can import the top-level
+            function by name:
+                |   import geometry.shapes.createRandomRectangle
+            You can also import all declarations defined in a particular package by putting "*" after the package name.
+        
+            In Kotlin, you can put multiple classes in the same file and choose any name for that file.
+________________________________________________________________________________________________________________________
