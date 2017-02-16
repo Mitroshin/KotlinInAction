@@ -33,3 +33,11 @@ fun mix(color1: Color1, color2: Color1) = when (setOf(color1, color2)) {
 
     else -> throw Exception("Dirty color")
 }
+
+fun mixOptimized(color1: Color1, color2: Color1) = when {
+    (color1 == RED && color2 == YELLOW) || (color1 == YELLOW && color2 == RED) -> ORANGE
+    (color1 == YELLOW && color2 == BLUE) || (color1 == BLUE && color2 == YELLOW) -> GREEN
+    (color1 == BLUE && color2 == VIOLET) || (color1 == VIOLET && color2 == BLUE) -> INDIGO
+
+    else -> throw Exception("Dirty color")
+}

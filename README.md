@@ -183,3 +183,13 @@ ________________________________________________________________________________
             specified as its arguments. A "Set" is a collection for which the order of items doesn't matter; two sets
             are equal if they contain the same items.
                 |   setOf(color1, color2)
+                
+        2.3.4 Using "when" without an argument
+        
+            Every time you call "mix()" it creates several "Set" instances that are used only to check whether two given
+            colors match the other two colors. Normally this isn't an issue, but if the function is called often, it's
+            worth rewriting the code in a different way to avoid creating garbage.
+        
+            -> example9.mixOptimized()
+        
+            If no argument is supplied for the "when" expression, the branch condition is any boolean expression.
