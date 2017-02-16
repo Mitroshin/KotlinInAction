@@ -81,3 +81,30 @@ ________________________________________________________________________________
     
         Value object - Class of this type (containing only data but no code).
         In Kotlin "public" is the default visibility.
+        
+        2.2.1 Properties
+        
+            Properties - the combination of the field and its accessors.
+            The concise declaration of the "Person" class hides the same underlying implementation as the original
+            Java code: its's a class with a private field that is initialized in the constructor and can be accessed
+            through the corresponding getter.
+        
+            Kotlin's "name" property is exposed to Java as a getter method called getName(). For Boolean properties, a
+            special rule for getter naming applies: if the property name starts with "is", no additional prefix for the
+            getter is added. Thus, from Java, you call isMarries().
+                Java:
+                    |   Person person = new Person("Bob", true);
+                    |   System.out.println(person.getName());
+                    |   System.out.println(person.isMarried());
+                Kotlin:
+                    |   val person = Person("Bob", true)
+                    |   println(person.name)
+                    |   println(person.isMarried)
+            You call the constructor without the keyword.
+            You access the property directly, but the getter is invoked.
+        
+            Setter of mutable properties work the same way:
+                Java:
+                    |   person.setMarried(false);
+                Kotlin:
+                    |   person.isMarried = false
