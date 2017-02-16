@@ -226,3 +226,19 @@ ________________________________________________________________________________
         
             An explicit cast to the specific type is expressed via the "as" keyword.
                 |   val n = e  as Num
+                
+        2.3.6 Refactoring: replace "if" with "when"
+        
+            You can rewrite the "eval" function to use the expression-body syntax, removing the "return" statement and
+            the curly braces and using the "if" expression as the function body instead.
+        
+            -> example10.eval2()
+        
+            The curly brackets  are optional if there's only one expression in an "if" branch. If an "if" branch ia a
+            block, the last expression is returned as a result.
+        
+            -> example10.eval3()
+        
+            "when" branches that checked the argument type and smart cast are applied here.
+                |   is Num -> e.value
+                |   is Sum -> eval3(e.left) + eval3(e.right)

@@ -15,3 +15,19 @@ fun eval1(e: Expr): Int {
 
     throw IllegalArgumentException("Unknown expression")
 }
+
+fun eval2(e: Expr): Int =
+        if (e is Num) {
+            e.value
+        } else if (e is Sum) {
+            eval2(e.left) + eval2(e.right)
+        } else {
+            throw IllegalArgumentException("Unknown expression")
+        }
+
+fun eval3(e: Expr): Int = when(e) {
+    is Num -> e.value
+    is Sum -> eval3(e.left) + eval3(e.right)
+
+    else -> throw IllegalArgumentException("Unknown expression")
+}
