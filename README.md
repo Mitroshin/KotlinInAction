@@ -336,3 +336,15 @@ ________________________________________________________________________________
             -> example16.readNumber1()
         
             Unlike Java you don't have to explicitly specify exceptions that can be thrown from function.
+            
+        2.5.2 "try" as an expression
+        
+            -> example16.readNumber2()
+        
+            In Kotlin "try" keyword introduces an expression, and you can assign its value to a variable. You always
+            need to enclose the statement body in curly braces. The value of the "try" expression as a whole is the
+            value of the last expression.
+        
+            If the execution of a "try" code block behaves normally, the last expression in a "try" block is the result.
+            If an exception is caught, the last expression in a corresponding "catch" block is the result.
+________________________________________________________________________________________________________________________
