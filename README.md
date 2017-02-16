@@ -64,3 +64,13 @@ ________________________________________________________________________________
                     executed. Even though a "val" reference is itself immutable, the object that it points to may be
                     mutable.
                 * var (variable) - Mutable reference, but its type is fixed.
+                
+        2.1.4 Easier string formatting: string templates
+        
+            -> example4
+        
+            Kotlin allows you to refer to local variables in string literals by putting the ""$" character in front of
+            the variable name. If you need to include the "$" character in a string, you escape it:
+                |   println("\$x")
+            You can use more complex expressions as well. All it takes is putting curly braces around the expression.
+________________________________________________________________________________________________________________________
