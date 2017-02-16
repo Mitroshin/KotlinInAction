@@ -255,3 +255,8 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________________
 
     2.4 Iterating over things: "while" and "for" loops
+    
+        2.4.1 The "while" loop
+        
+            Kotlin has "while" and "do-while" loops, and their syntax doesn't differ from the corresponding loops in
+            Java.
