@@ -260,3 +260,27 @@ ________________________________________________________________________________
         
             Kotlin has "while" and "do-while" loops, and their syntax doesn't differ from the corresponding loops in
             Java.
+            
+        2.4.2 Iterating over numbers: ranges and progressions
+        
+            To replace the most common use cases of "for" loops, Kotlin uses the concept of "ranges". A "range" is
+            essentially just an interval between two values, usually numbers: a start and an end. You write it using
+            the ".." operator:
+                |   val oneToTen = 1 .. 10
+            Ranges in Kotlin are "closed" or "inclusive", meaning the second value is also always a part of the range.
+        
+            Let's use integer ranges to play the Fizz-Buzz game. Players take turns counting incrementally, replacing
+            any number divisible by three with the word "fizz" and any number divisible by five with the word "buzz". If
+            a number ia a multiple of both three and five, you say "FizzBuzz".
+        
+            -> example11.range1
+        
+            Let's start counting backward from 100 and include only even numbers.
+        
+            -> example11.range2
+        
+            The ".." syntax always create a range that includes the end point. In many cases, it's more convenient to
+            iterate over half-closed ranges, which don't include the specified end point. To create such a range, use
+            the "until" function.
+        
+            -> example11.range3
