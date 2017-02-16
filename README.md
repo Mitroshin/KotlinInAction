@@ -23,3 +23,29 @@ ________________________________________________________________________________
             * Arrays are just classes
             * println() instead of System.out.println()
             * You can omit the semicolon "";" from the end of a line
+            
+        2.1.2 Functions
+        
+            -> example2
+        
+            The function declaration:
+                * "fun" keyword
+                * function name
+                * parameter list in parentheses "()"
+                * colon ":"
+                * return type
+        
+            In Kotlin "if" is an expression with a result value. It's similar to a ternary operation in Java.
+        
+            -> example2.max1()
+        
+            Block body - if a function is written with its body in curly braces.
+        
+            -> example2.max2()
+        
+            Expression body - if a function returns an expression directly.
+        
+            -> example2.max3()
+        
+            For expression body functions, compiler can analyze the expression used as a the body of the
+            function and use its type as the function return type.
