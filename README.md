@@ -133,3 +133,5 @@ ________________________________________________________________________________
         
             In Kotlin, you can put multiple classes in the same file and choose any name for that file.
 ________________________________________________________________________________________________________________________
+
+    2.3 Representing and handling choices: enums and "when"
