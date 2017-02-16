@@ -10,3 +10,5 @@ Chapter 2: Kotlin Basics
         * Smart casts
         * Throwing and handing exceptions
 ________________________________________________________________________________________________________________________
+
+    2.1 Basic elements: functions and variables
