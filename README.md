@@ -74,3 +74,10 @@ ________________________________________________________________________________
                 |   println("\$x")
             You can use more complex expressions as well. All it takes is putting curly braces around the expression.
 ________________________________________________________________________________________________________________________
+
+    2.2 Classes and Properties
+    
+        -> example5
+    
+        Value object - Class of this type (containing only data but no code).
+        In Kotlin "public" is the default visibility.
