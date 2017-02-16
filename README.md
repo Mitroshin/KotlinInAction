@@ -242,3 +242,14 @@ ________________________________________________________________________________
             "when" branches that checked the argument type and smart cast are applied here.
                 |   is Num -> e.value
                 |   is Sum -> eval3(e.left) + eval3(e.right)
+        
+        2.3.7 Block as branches of "if" and "when"
+        
+            Both "if" and "when" can have blocks as branches. In, this case, the last expression in the block is the
+            result.
+        
+            -> example10.evalWithLogging()
+        
+            The rule "the last expression in a block is the result" holds in all cases where a block can be used and a
+            result is expected. But this rule doesn't hold for regular function.
+________________________________________________________________________________________________________________________
