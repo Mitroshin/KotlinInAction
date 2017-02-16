@@ -323,3 +323,10 @@ ________________________________________________________________________________
             object belong to the range, using the "in" operator. The same "in" check works with collections as well.
                 |   "Kotlin" in setOf("Java", "Scala")
 ________________________________________________________________________________________________________________________
+
+    2.5 Exception in Kotlin
+    
+        A function can complete in a normal way or throw an exception if an error occurs. The function caller can catch
+        this exception and process if; if it doesn't, the exception is rethrown further up the stack.
+    
+        Unlike in Java, in Kotlin the "throw" construct is an expression and can be used as a part of other expressions.
