@@ -108,3 +108,10 @@ ________________________________________________________________________________
                     |   person.setMarried(false);
                 Kotlin:
                     |   person.isMarried = false
+                    
+        2.2.2 Custom accessors
+        
+            -> example6
+        
+            The property "isSquare" doesn't need a field to store its value. It only has a custom getter with the
+            implementation provided.
