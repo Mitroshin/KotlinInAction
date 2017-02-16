@@ -330,3 +330,9 @@ ________________________________________________________________________________
         this exception and process if; if it doesn't, the exception is rethrown further up the stack.
     
         Unlike in Java, in Kotlin the "throw" construct is an expression and can be used as a part of other expressions.
+        
+        2.5.1 "try", "catch" and "finally"
+        
+            -> example16.readNumber1()
+        
+            Unlike Java you don't have to explicitly specify exceptions that can be thrown from function.
