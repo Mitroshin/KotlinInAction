@@ -303,3 +303,23 @@ ________________________________________________________________________________
             current item. You don't need to create a separate variable to store the index and increment it by hand.
         
             -> example13
+            
+        2.4.4 Using an "in" check
+        
+            You use the "in" to check whether a value in in a range, or its opposite, "!in", to check if a value isn't
+            in a range. Here's how you can use "in" to check if a character belong to a range characters.
+        
+            -> example14
+        
+            The "in" and "!in" operators also work in "when" expressions.
+        
+            -> example15
+        
+            You can combine multiple ranges.
+                |   in 'a'.. 'z', in 'A' .. 'Z' -> "It's a letter!"
+        
+            If you have any class that supports comparing instances. you can create ranges of objects of that type. If
+            you have such a range, you can't enumerate all objects in the range. But you can still check whether another
+            object belong to the range, using the "in" operator. The same "in" check works with collections as well.
+                |   "Kotlin" in setOf("Java", "Scala")
+________________________________________________________________________________________________________________________
