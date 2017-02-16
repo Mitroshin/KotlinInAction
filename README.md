@@ -284,3 +284,22 @@ ________________________________________________________________________________
             the "until" function.
         
             -> example11.range3
+            
+        2.4.3 Iterating over maps
+        
+            Let's look at a small program that prints binary representations for characters. You store these binary
+            representations in a map.
+        
+            -> example12
+        
+            The ".." syntax to create range works not only for numbers, but also for characters.
+            You can use the shorthand syntax for getting and updating the values of a map by key. Instead of calling
+            "get()" and "put()", you can use to read values
+                |   map[key]
+            and to set them
+                |   map[ey] = value
+        
+            You can use the same unpacking syntax to iterate over a collection while keeping track of the index of the
+            current item. You don't need to create a separate variable to store the index and increment it by hand.
+        
+            -> example13
