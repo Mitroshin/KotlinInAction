@@ -49,3 +49,18 @@ ________________________________________________________________________________
         
             For expression body functions, compiler can analyze the expression used as a the body of the
             function and use its type as the function return type.
+            
+        2.1.3 Variables
+        
+            -> example3
+        
+            You can omit type of variable or you may put the type after the variable name, but If a variable doesn't
+            have an initializer, you need to specify its type explicitly.
+        
+            There are two keyword to declare a variable:
+                * val (value) - Immutable reference. A "val" variable must be initialized exactly once during the
+                    execution of the block where it's defined. But you can initialize it with different values depending
+                    on some condition, if the compiler can ensure that only one of the initialization statement will be
+                    executed. Even though a "val" reference is itself immutable, the object that it points to may be
+                    mutable.
+                * var (variable) - Mutable reference, but its type is fixed.
