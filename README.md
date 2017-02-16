@@ -135,3 +135,17 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________________
 
     2.3 Representing and handling choices: enums and "when"
+    
+        2.3.1 Declaring enum classes
+        
+            -> example9.chapter2.Color1
+        
+            Just as in Java, enums aren't lists of values: you can declare properties and methods on enum classes.
+        
+            -> example9.chapter2.Color2
+        
+            Enum constants use the same constructor and property declaration syntax as you saw earlier for regular
+            classes. When you declare each enum constant, you need to provide the property values for that constant.
+        
+            If you define any methods in the enum class, the semicolon ":" separates the enum constant list from the
+            method definitions.
