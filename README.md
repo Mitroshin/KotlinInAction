@@ -193,3 +193,36 @@ ________________________________________________________________________________
             -> example9.mixOptimized()
         
             If no argument is supplied for the "when" expression, the branch condition is any boolean expression.
+            
+        2.3.5 Smart casts: combining type checks and casts
+        
+            Function that evaluates simple arithmetic expressions like (1 + 2) + 4.
+            To encode the expressions we need to store them in a tree-like structure. where each node is either a sum
+            "Sum" or a number "Num". "Num" is always a leaf node, whereas a "Sum" node has two children: the arguments
+            of the "sum" operation
+        
+            Simple structure of classes used to encode the expressions: an interface called "Expr" and two classes,
+            "Num" and "Sum", that implement it.
+        
+            -> example10
+        
+            "Expr" interface doesn't declare any methods, it's used as a marker interface to provide a common type for
+            different kinds of expressions. To mark that a class implements an interface, you use a colon ":".
+            The argument of a "Sum" operation can be any Expr: either "Num" or another "Sum".
+        
+            -> example10.eval1()
+        
+            This explicit cast to "Num" is redundant.
+                |   val n = e as Num
+        
+            The variable "e" is smart-cast.
+                |   return eval(e.right) + eval(e.left)
+        
+            In Kotlin, you check whether a variable is of a certain type by using an "is" check. The "is" check is
+            similar to "instanceof" in Java.
+        
+            If you check the variable for a certain type, you don't need to cast it afterward; you can use it as having
+            the type you checked for. In effect, the compiler performs the cast for you, and we call it a "smart cast".
+        
+            An explicit cast to the specific type is expressed via the "as" keyword.
+                |   val n = e  as Num
