@@ -149,3 +149,19 @@ ________________________________________________________________________________
         
             If you define any methods in the enum class, the semicolon ":" separates the enum constant list from the
             method definitions.
+            
+        2.3.2 Using "when" to deal with enum classes
+        
+            Imagine you need a function that gives you a mnemonic for each color and you don't want to store this
+            information in the enum itself.
+        
+            Like "if", "when" is an expression that returns a value.
+        
+            -> example9.getMnemonic()
+        
+            The code finds the branch corresponding to the passed "color" value. Unlike Java, you don't need to write
+            "break" statement in each branch. If a match is successful, only the corresponding branch is executed.
+        
+            -> example9.getWarmth()
+        
+            You can also combine multiple value in the same branch if you separate them with commas.
