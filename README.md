@@ -396,3 +396,13 @@ ________________________________________________________________________________
         fixed. If you need to create special format to print collections, you may write a following function 
         
         -> example3
+        
+        3.2.1 Named arguments
+        
+            -> example3
+            
+            When calling a method written in Kotlin, you can specify the names of some arguments that you are passing
+            to the function. If you specify the name of an argument in a call, you should also specify the names for all 
+            the arguments after that.
+            
+            You can't use named arguments when calling methods written in Java.

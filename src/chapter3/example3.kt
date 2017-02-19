@@ -22,8 +22,5 @@ fun <T> joinToString(
 
 fun main(args: Array<String>) {
     val list = listOf(1, 2, 3, 4)
-    val separator = ";"
-    val prefix = "["
-    val postfix = "}"
-    println(joinToString(list, separator, prefix, postfix))
+    println(joinToString(list, separator = ";", prefix = "[", postfix = "]"))
 }
