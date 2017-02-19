@@ -406,3 +406,16 @@ ________________________________________________________________________________
             the arguments after that.
             
             You can't use named arguments when calling methods written in Java.
+            
+        3.2.2 Default parameter values
+        
+            In Kotlin, you can often avoid creating overloads because you can specify default values for parameters in a
+            function declaration. 
+            
+            -> example3
+            
+            You can either invoke the function with all the arguments or omit some of them. If you use nemd arguments, 
+            you can omit some arguments from middle of the list and specify only the ones you need.
+            
+            Java doesn't have the concept of default parameter values, you have to specify all the parameter values 
+            explicitly when you call a Kotlin functions with default parameter values from Java.
