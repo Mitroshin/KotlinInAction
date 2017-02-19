@@ -378,4 +378,14 @@ Chapter 3: Defining and calling functions
         * Structuring yor code with top-level and local functions and properties
 ________________________________________________________________________________________________________________________
 
-    
+    3.1 Creating collections in Kotlin
+        
+        -> example1
+        
+        "to" is not a special construct, but a normal function.
+        "javaClass" is Kotlin's equivalent of Java's getClass()
+        
+        Kotlin uses the standart Java collection classes and doesn't have its own set of collection classes, but you can
+        do much more with them in Kotlin.
+        
+        -> example2
