@@ -367,3 +367,15 @@ ________________________________________________________________________________
             value belong to a range.
         * Exception handling in Kotlin is very similar to Java, except that Kotlin doesn't require you to declare the
             exceptions that can be thrown by a method.
+________________________________________________________________________________________________________________________
+
+Chapter 3: Defining and calling functions
+
+    This chapter covers:
+        * Functions for working with collections, strings, and regular expressions
+        * Using named arguments, default argument values, and the infix call syntax
+        * Adapting Java libraries to Kotlin through extension functions and properties
+        * Structuring yor code with top-level and local functions and properties
+________________________________________________________________________________________________________________________
+
+    
