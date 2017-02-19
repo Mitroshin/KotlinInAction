@@ -389,3 +389,10 @@ ________________________________________________________________________________
         do much more with them in Kotlin.
         
         -> example2
+        
+    3.2 Making functions easier to call
+    
+        Let's print content of collection. Java collections have a default "toString()" implementation, bt its format is 
+        fixed. If you need to create special format to print collections, you may write a following function 
+        
+        -> example3
