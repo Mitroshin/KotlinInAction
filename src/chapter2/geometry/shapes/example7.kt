@@ -1,5 +1,6 @@
-package geometry.shapes
+package chapter2.geometry.shapes
 
+import chapter2.Rectangle
 import java.util.*
 
 class Rectangle(val height: Int, val width: Int) {

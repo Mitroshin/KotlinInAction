@@ -1,4 +1,6 @@
-import Color1.*
+package chapter2
+
+import chapter2.Color1.*
 
 enum class Color1 {
     RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET

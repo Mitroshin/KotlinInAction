@@ -1,3 +1,5 @@
+package chapter2
+
 fun max1(a: Int, b: Int): Int {
     return if (a > b) a else b
 }
