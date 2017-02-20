@@ -457,3 +457,29 @@ ________________________________________________________________________________
             
             To expose a constant to Java code as a "public static final" field, you can mark it with the "const" 
             modifer (this is allowed for propertirs of primitive types, as well as "String").
+            
+    3.3 Adding methods to other people's classes: extension functions and properties
+    
+        Exatention function - it's a function that can be called as a member of a class but is defined outside of it.
+        
+        -> example5.lastChar1()
+        
+        You need to put the name of the class or interface that you're extending before the name of the function you're 
+        adding. This class name is called the "receiver type", and the value on which you're calling the extension 
+        function called the "receiver object". You can call the function using the same syntax you use for ordinary 
+        class members.
+        
+            |   println("Kotlin".lastChar2())
+            
+        String - is the receiver type.
+        "Kotlin" - is the receiver object.
+        
+        In the body of an extension function, you use "this" as you'd use it in a method. And, as in regular method, you 
+        can omit it
+        
+        -> example5.lastChar2()
+        
+        In the extension function, you can directly access the method and properties of the class you're extending, as
+        in method defined in the class itself. Extension functions don't allow you to break encapsulation. Unlike 
+        methods defined in the class, extension functions don't have access to private or protected members of the 
+        class.
