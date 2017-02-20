@@ -494,3 +494,12 @@ ________________________________________________________________________________
         You can change the name of the class or function you're importing using the "as" keyword.
         
         -> example7
+        
+    3.3.2 Calling extension function from Java
+    
+        To use extension function from Java you need to call the static method and pass the receiver object instance. 
+        The name of the Java class containing the method is determinate from the name os the file where the function is
+        declared.
+        
+        Java:
+            |   char c = StringUtil.lastChar("Java");
