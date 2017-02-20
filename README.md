@@ -503,3 +503,18 @@ ________________________________________________________________________________
         
         Java:
             |   char c = StringUtil.lastChar("Java");
+            
+    3.3.3 Utility functions as extensions
+    
+        -> strings.join.kt
+        
+        "this" refers to the receiver object: a collection of T.
+        You make it an extension to a collection of elements, and you provide default values fot all the arguments.Now 
+        you can invoke joinToString() like a member of a class
+        
+        -> example8
+        
+        You can use a more specific type as a receiver type, not just a class. Let's say you want to have a join() 
+        function that can be invoked only on collections of strings.
+        
+        -> example9

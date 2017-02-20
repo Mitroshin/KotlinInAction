@@ -4,7 +4,7 @@ import chapter3.strings.joinToString
 
 fun main(args: Array<String>) {
     val list = listOf(1, 2, 3, 4)
-    println(joinToString(list, separator = ";", prefix = "[", postfix = "]"))
-    println(joinToString(list))
-    println(joinToString(list, separator = ";"))
+    println(list.joinToString(separator = ";", prefix = "[", postfix = "]"))
+    println(list.joinToString())
+    println(list.joinToString(separator = ";"))
 }
