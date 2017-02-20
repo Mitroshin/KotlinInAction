@@ -518,3 +518,15 @@ ________________________________________________________________________________
         function that can be invoked only on collections of strings.
         
         -> example9
+        
+    3.3.4 No overriding for extension functions
+    
+        You can't overryde an extension function. 
+        
+        -> example10
+        -> example11
+        
+        The extension function is resolved statically.
+        
+        If the class has a member function with the same signature as an extension function, the member function always
+        takes precedence.
