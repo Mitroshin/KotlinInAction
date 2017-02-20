@@ -426,7 +426,7 @@ ________________________________________________________________________________
             functions are still members of the package declared at the top of the file, and you still need to import 
             them if you want to call them other packages.
             
-            -> join.kt
+            -> strings.join.kt
             -> example3
             
             If you need to call such a function from Java, you have to understand how it will be compiled. This is a 
@@ -462,7 +462,7 @@ ________________________________________________________________________________
     
         Exatention function - it's a function that can be called as a member of a class but is defined outside of it.
         
-        -> example5.lastChar1()
+        -> strings.example5.lastChar1()
         
         You need to put the name of the class or interface that you're extending before the name of the function you're 
         adding. This class name is called the "receiver type", and the value on which you're calling the extension 
@@ -477,9 +477,20 @@ ________________________________________________________________________________
         In the body of an extension function, you use "this" as you'd use it in a method. And, as in regular method, you 
         can omit it
         
-        -> example5.lastChar2()
+        -> strings.example5.lastChar2()
         
         In the extension function, you can directly access the method and properties of the class you're extending, as
         in method defined in the class itself. Extension functions don't allow you to break encapsulation. Unlike 
         methods defined in the class, extension functions don't have access to private or protected members of the 
         class.
+        
+    3.3.1 Imports and extension functions
+    
+        When you define an extension function, it doesn't automatically become available across you entire project. 
+        Instead, it need to be imported, just like any other class or function.
+        
+        -> example6
+        
+        You can change the name of the class or function you're importing using the "as" keyword.
+        
+        -> example7
