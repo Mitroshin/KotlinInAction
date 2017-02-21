@@ -542,3 +542,5 @@ ________________________________________________________________________________
         When you need to access an extension property from Java, you should invoke its getter explicitly: 
             Java:
                 |   StringUtilKt.getLastChar("Java")
+                
+    3.4 Working with collections: varargs, infix calls, and library support
