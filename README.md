@@ -530,3 +530,15 @@ ________________________________________________________________________________
         
         If the class has a member function with the same signature as an extension function, the member function always
         takes precedence.
+        
+    3.3.5 Extension properties
+    
+        It's not possible to add extra fields to existing instances of Java objects. But the shorter syntax is still 
+        sometimes handy.
+        
+        -> example5.lastChar
+        
+        You can access extension properties exactly like member properties.
+        When you need to access an extension property from Java, you should invoke its getter explicitly: 
+            Java:
+                |   StringUtilKt.getLastChar("Java")
