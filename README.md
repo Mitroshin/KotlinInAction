@@ -544,3 +544,11 @@ ________________________________________________________________________________
                 |   StringUtilKt.getLastChar("Java")
                 
     3.4 Working with collections: varargs, infix calls, and library support
+    
+        3.4.1 Extending the Java Collection API
+        
+            -> example2
+            
+            The last() and max() functions are declared as extension functions. 
+            IDE will show you all the possible functions available for that type of object. The list includes both 
+            regular methods and extension functions.
