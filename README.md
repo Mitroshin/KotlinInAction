@@ -552,3 +552,22 @@ ________________________________________________________________________________
             The last() and max() functions are declared as extension functions. 
             IDE will show you all the possible functions available for that type of object. The list includes both 
             regular methods and extension functions.
+            
+        3.4.2 Varargs: functions that accept an arbinaty number of arguments
+        
+            When you call a function to create a list, you can pass any number of argument to it.
+            
+                |   val list = listOf(2, 3, 5, 7, 11)
+            
+            This function is declared in the library like that
+            
+                |   fun listOf<T>(vararg values: T): List<T> { ... }
+                
+            Insteaf of threee dots after the type in Java, Kotlin uses the "vararg" modifier on the parameter.
+            Kotlin requires you to explicitly unpack the array when you callint the functions and the argument you need
+            to pass are already packed in the array. This feature is called using a "spread operator". It's as simple as
+            putting the * character befire the corresponding argument.
+            
+            -> example12
+            
+            
