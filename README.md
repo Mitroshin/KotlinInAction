@@ -570,4 +570,21 @@ ________________________________________________________________________________
             
             -> example12
             
+        3.4.3 Working with pairs: infix calls and destructuring declarations
+        
+            The word "to" (when you create a map) isn't a build-in construct, but reather a method invocation of a 
+            special kind called an "infix call". In an infix call, the method name is places immediately between the 
+            target object name and the parameter, with no extra separator. 
+                |   1.to("one)
+                |   1 to "one
+            Infix calls can be used with regular methods and extension functions that have one required parameter. The 
+            "to" function return an instance of "Pair", which is a Kotlin standart library class that represent a pair
+            of element. You can assign a pair of elements to two variables directly
+                |   val (number, name) = 1 to "one"
+            This feature is called a "destructing declaration". You can assign a map entry to two separate variables,
+            "key" and "values". This also works with the loops.
+            -> strings.join.kt
             
+            The function is declared in the library like that
+            
+                |   fun <K, V> mapOf(vararg values: Pair<K, V>): <K, V>
