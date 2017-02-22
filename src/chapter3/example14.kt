@@ -27,5 +27,5 @@ fun parsePathRegexp(path: String) {
 fun main(args: Array<String>) {
     parsePath("C:/Users/Dmitry/Documents/Kotlin/KotlinInAction/src/chapter3/example14.kt")
     println()
-    parsePathRegexp("C:/Users/Dmitry/Documents/Kotlin/KotlinInAction/src/chapter3/example14.kt")
+    parsePathRegexp("""C:\Users\Dmitry\Documents\Kotlin\KotlinInAction\src\chapter3\example14.kt""")
 }

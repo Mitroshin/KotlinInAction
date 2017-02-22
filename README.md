@@ -617,4 +617,21 @@ ________________________________________________________________________________
             
             -> example15.parsePathRegexp()
             
+        3.5.3 Multiple triple-quoted strings
+        
+            Triple-quoted strings is not only to avoid escaping characters. Such a string literal can contain any 
+            characters, including line breaks.
             
+            -> example15
+            
+            The multiple string contains all the characters between the triple quotes, including indents used to format 
+            code. 
+            
+            The triple-quoted string contains line breaks, but you can't use special characters like "\n". On the other 
+            hand, you don't have to escape "\", so the Windows-style path can be written as 
+            
+            -> example14
+            
+            You can use templates in multiline strings. Because multiline strings don't support escape sequences, you 
+            have to use an embedded expression if you need to use a literal dollar sign in the contents of your string.
+                |   val price = """${'$'}99.9"""
