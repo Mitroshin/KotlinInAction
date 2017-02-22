@@ -593,3 +593,16 @@ ________________________________________________________________________________
     
         Kotlin strings are exactly the same things as Java strings. Kotlin makes working with standart Java strings more
         enjoyable by providing a bunch of useful extension functions. 
+        
+        3.5.1 Splitting strings
+        
+            The split() method in Java doesn't work on a dot. Kotlin provides as replacements several overloaded 
+            extensions named "split" that have different arguments. The one that takes a regular expression requires a
+            value of "Regex" type, not "String".
+            
+            -> example13
+                
+            Kotlin uses exactly the same regular-expression syntax as in Java. The pattern here matches a dot or a dash.
+            
+            toRegex() - extension function to convert a string into a regular expression. But in this case you can use 
+            the other overload of the split().
