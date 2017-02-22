@@ -635,3 +635,30 @@ ________________________________________________________________________________
             You can use templates in multiline strings. Because multiline strings don't support escape sequences, you 
             have to use an embedded expression if you need to use a literal dollar sign in the contents of your string.
                 |   val price = """${'$'}99.9"""
+                
+    3.6 Making your code tidy: local functions and extensions
+    
+        You can nest the function you've extracted in the containing function. This way, you have the structure you need 
+        without any extra syntactic overhead.
+        
+        In the following example, a function saves a user to a database, and you need to make sure the user object 
+        contains valid data
+        
+        -> example16.saveUser1()
+        
+        Field validation is duplicated. If you put the validation code into a locak function, you can get trip of the 
+        duplication and still maintain a clear code structure. 
+        
+        -> example16.saveUser2()
+        
+        Local functions have access to all parameters and veriables of the enclosing function.
+        
+        -> example16.saveUser3()
+        
+        You can move the validation logic into an extension function of the "User" class
+        
+        -> example16.saveUser4()
+        
+        The API of the class contains only the essential methods used everywhere. On the other hand, functions that 
+        primarily deal with a single object and don't need access to its private data can access its members without 
+        extra qualification.
