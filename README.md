@@ -606,3 +606,15 @@ ________________________________________________________________________________
             
             toRegex() - extension function to convert a string into a regular expression. But in this case you can use 
             the other overload of the split().
+            
+        3.5.2 Regular expressions and triple_quoted strings
+        
+            Parse a file's full path name into its components.
+            
+            -> example14.parsePath()
+            
+            Or you may use regular expression
+            
+            -> example15.parsePathRegexp()
+            
+            
