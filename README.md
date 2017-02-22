@@ -588,3 +588,8 @@ ________________________________________________________________________________
             The function is declared in the library like that
             
                 |   fun <K, V> mapOf(vararg values: Pair<K, V>): <K, V>
+                
+    3.5 Working with strings and regular expressions
+    
+        Kotlin strings are exactly the same things as Java strings. Kotlin makes working with standart Java strings more
+        enjoyable by providing a bunch of useful extension functions. 
