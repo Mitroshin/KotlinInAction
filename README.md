@@ -697,3 +697,29 @@ Chapter 4: Classes, objects, and interfaces
 ________________________________________________________________________________________________________________________
 
     4.1 Defining class hierarchies
+    
+        4.1.1 Interfaces in Kotlin: methods with default implementations
+            
+            Kotlin interfaces are similar to those of Java 8: they can contain definitions of abstract methods as well 
+            as implementations of non-abstract methods, but they can't contain any state.
+            
+            -> example1
+            
+            To declare an interface in Kotlin, use the "interface" keyword.
+            Kotlin use the colon after the class name to replace both the "extends" and "implements" keyword used in 
+            Java. 
+            The "override" modifier, similar to the "@Override" annotation in Java. Using the "override" modifies is 
+            mandatory in Kotlin. An interface method can have a default implementation.
+            
+            You must provide an explicit implementation if more then one implementation for the same member is 
+            inherited.
+            
+            "super" qualifed by the supertipe name in angle brackets specifies the parent the method from which you want 
+            to call. To invoke an inherited implementation, you use the "super" keyword.
+                Java:
+                    |   Clickable.super.showOff()
+                Kotlin
+                    |   super<Clickable>.showOf()
+                    
+            If you need to invoke one inherited implementation
+                |   override fun showOff() = super<Clickable>.showOff()
