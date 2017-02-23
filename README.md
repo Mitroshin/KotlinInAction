@@ -695,3 +695,5 @@ Chapter 4: Classes, objects, and interfaces
         * Data classes and class delegation
         * Using the "object" keyword
 ________________________________________________________________________________________________________________________
+
+    4.1 Defining class hierarchies
