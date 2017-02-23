@@ -389,6 +389,7 @@ ________________________________________________________________________________
         do much more with them in Kotlin.
         
         -> example2
+________________________________________________________________________________________________________________________
         
     3.2 Making functions easier to call
     
@@ -457,6 +458,7 @@ ________________________________________________________________________________
             
             To expose a constant to Java code as a "public static final" field, you can mark it with the "const" 
             modifer (this is allowed for propertirs of primitive types, as well as "String").
+________________________________________________________________________________________________________________________
             
     3.3 Adding methods to other people's classes: extension functions and properties
     
@@ -484,64 +486,65 @@ ________________________________________________________________________________
         methods defined in the class, extension functions don't have access to private or protected members of the 
         class.
         
-    3.3.1 Imports and extension functions
-    
-        When you define an extension function, it doesn't automatically become available across you entire project. 
-        Instead, it need to be imported, just like any other class or function.
+        3.3.1 Imports and extension functions
         
-        -> example6
-        
-        You can change the name of the class or function you're importing using the "as" keyword.
-        
-        -> example7
-        
-    3.3.2 Calling extension function from Java
-    
-        To use extension function from Java you need to call the static method and pass the receiver object instance. 
-        The name of the Java class containing the method is determinate from the name os the file where the function is
-        declared.
-        
-        Java:
-            |   char c = StringUtil.lastChar("Java");
+            When you define an extension function, it doesn't automatically become available across you entire project. 
+            Instead, it need to be imported, just like any other class or function.
             
-    3.3.3 Utility functions as extensions
-    
-        -> strings.join.kt
+            -> example6
+            
+            You can change the name of the class or function you're importing using the "as" keyword.
+            
+            -> example7
         
-        "this" refers to the receiver object: a collection of T.
-        You make it an extension to a collection of elements, and you provide default values fot all the arguments.Now 
-        you can invoke joinToString() like a member of a class
+        3.3.2 Calling extension function from Java
         
-        -> example8
-        
-        You can use a more specific type as a receiver type, not just a class. Let's say you want to have a join() 
-        function that can be invoked only on collections of strings.
-        
-        -> example9
-        
-    3.3.4 No overriding for extension functions
-    
-        You can't overryde an extension function. 
-        
-        -> example10
-        -> example11
-        
-        The extension function is resolved statically.
-        
-        If the class has a member function with the same signature as an extension function, the member function always
-        takes precedence.
-        
-    3.3.5 Extension properties
-    
-        It's not possible to add extra fields to existing instances of Java objects. But the shorter syntax is still 
-        sometimes handy.
-        
-        -> example5.lastChar
-        
-        You can access extension properties exactly like member properties.
-        When you need to access an extension property from Java, you should invoke its getter explicitly: 
+            To use extension function from Java you need to call the static method and pass the receiver object instance. 
+            The name of the Java class containing the method is determinate from the name os the file where the function is
+            declared.
+            
             Java:
-                |   StringUtilKt.getLastChar("Java")
+                |   char c = StringUtil.lastChar("Java");
+            
+        3.3.3 Utility functions as extensions
+        
+            -> strings.join.kt
+            
+            "this" refers to the receiver object: a collection of T.
+            You make it an extension to a collection of elements, and you provide default values fot all the arguments.Now 
+            you can invoke joinToString() like a member of a class
+            
+            -> example8
+            
+            You can use a more specific type as a receiver type, not just a class. Let's say you want to have a join() 
+            function that can be invoked only on collections of strings.
+            
+            -> example9
+            
+        3.3.4 No overriding for extension functions
+        
+            You can't overryde an extension function. 
+            
+            -> example10
+            -> example11
+            
+            The extension function is resolved statically.
+            
+            If the class has a member function with the same signature as an extension function, the member function always
+            takes precedence.
+            
+        3.3.5 Extension properties
+        
+            It's not possible to add extra fields to existing instances of Java objects. But the shorter syntax is still 
+            sometimes handy.
+            
+            -> example5.lastChar
+            
+            You can access extension properties exactly like member properties.
+            When you need to access an extension property from Java, you should invoke its getter explicitly: 
+                Java:
+                    |   StringUtilKt.getLastChar("Java")
+________________________________________________________________________________________________________________________
                 
     3.4 Working with collections: varargs, infix calls, and library support
     
@@ -588,6 +591,7 @@ ________________________________________________________________________________
             The function is declared in the library like that
             
                 |   fun <K, V> mapOf(vararg values: Pair<K, V>): <K, V>
+________________________________________________________________________________________________________________________                
                 
     3.5 Working with strings and regular expressions
     
@@ -635,6 +639,7 @@ ________________________________________________________________________________
             You can use templates in multiline strings. Because multiline strings don't support escape sequences, you 
             have to use an embedded expression if you need to use a literal dollar sign in the contents of your string.
                 |   val price = """${'$'}99.9"""
+________________________________________________________________________________________________________________________                
                 
     3.6 Making your code tidy: local functions and extensions
     
@@ -662,6 +667,7 @@ ________________________________________________________________________________
         The API of the class contains only the essential methods used everywhere. On the other hand, functions that 
         primarily deal with a single object and don't need access to its private data can access its members without 
         extra qualification.
+________________________________________________________________________________________________________________________        
         
     3.7 Summary
     
