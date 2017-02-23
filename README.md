@@ -679,3 +679,13 @@ ________________________________________________________________________________
         * Triple-quoted strings provide a clean way to write expressions that would require a lot of noisy escaping and
             string concatenation in Java.
         * Local functions help you structure your code more cleanly and eliminate duplication.
+________________________________________________________________________________________________________________________
+
+Chapter 4: Classes, objects, and interfaces
+
+    This chapter covers:
+        * Classes and interfaces
+        * Nontrivial properties and constructors
+        * Data classes and class delegation
+        * Using the "object" keyword
+________________________________________________________________________________________________________________________
