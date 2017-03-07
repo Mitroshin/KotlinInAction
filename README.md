@@ -375,7 +375,7 @@ Chapter 3: Defining and calling functions
         * Functions for working with collections, strings, and regular expressions
         * Using named arguments, default argument values, and the infix call syntax
         * Adapting Java libraries to Kotlin through extension functions and properties
-        * Structuring yor code with top-level and local functions and properties
+        * Structuring your code with top-level and local functions and properties
 ________________________________________________________________________________________________________________________
 
     3.1 Creating collections in Kotlin
@@ -385,7 +385,7 @@ ________________________________________________________________________________
         "to" is not a special construct, but a normal function.
         "javaClass" is Kotlin's equivalent of Java's getClass()
         
-        Kotlin uses the standart Java collection classes and doesn't have its own set of collection classes, but you can
+        Kotlin uses the standard Java collection classes and doesn't have its own set of collection classes, but you can
         do much more with them in Kotlin.
         
         -> example2
@@ -393,8 +393,8 @@ ________________________________________________________________________________
         
     3.2 Making functions easier to call
     
-        Let's print content of collection. Java collections have a default "toString()" implementation, bt its format is 
-        fixed. If you need to create special format to print collections, you may write a following function 
+        Let's print content of collection. Java collections have a default "toString()" implementation, but its format 
+        is fixed. If you need to create special format to print collections, you may write a following function 
         
         -> example3
         
@@ -415,7 +415,7 @@ ________________________________________________________________________________
             
             -> example3
             
-            You can either invoke the function with all the arguments or omit some of them. If you use nemd arguments, 
+            You can either invoke the function with all the arguments or omit some of them. If you use named arguments, 
             you can omit some arguments from middle of the list and specify only the ones you need.
             
             Java doesn't have the concept of default parameter values, you have to specify all the parameter values 
@@ -453,16 +453,16 @@ ________________________________________________________________________________
             -> example4
             
             The value of such a property will be stored in a static field. Top-level properties also allow you to define 
-            contstant. Top-level properties, just like any other properties, are exposed to Java code as accessoe 
+            constant. Top-level properties, just like any other properties, are exposed to Java code as accesore 
             methods. 
             
             To expose a constant to Java code as a "public static final" field, you can mark it with the "const" 
-            modifer (this is allowed for propertirs of primitive types, as well as "String").
+            modifer (this is allowed for properties of primitive types, as well as "String").
 ________________________________________________________________________________________________________________________
             
     3.3 Adding methods to other people's classes: extension functions and properties
     
-        Exatention function - it's a function that can be called as a member of a class but is defined outside of it.
+        Extention function - it's a function that can be called as a member of a class but is defined outside of it.
         
         -> strings.example5.lastChar1()
         
@@ -499,9 +499,9 @@ ________________________________________________________________________________
         
         3.3.2 Calling extension function from Java
         
-            To use extension function from Java you need to call the static method and pass the receiver object instance. 
-            The name of the Java class containing the method is determinate from the name os the file where the function is
-            declared.
+            To use extension function from Java you need to call the static method and pass the receiver object 
+            instance. The name of the Java class containing the method is determinate from the name of the file where 
+            the function is declared.
             
             Java:
                 |   char c = StringUtil.lastChar("Java");
@@ -511,8 +511,8 @@ ________________________________________________________________________________
             -> strings.join.kt
             
             "this" refers to the receiver object: a collection of T.
-            You make it an extension to a collection of elements, and you provide default values fot all the arguments.Now 
-            you can invoke joinToString() like a member of a class
+            You make it an extension to a collection of elements, and you provide default values for all the arguments.
+            Now you can invoke joinToString() like a member of a class
             
             -> example8
             
@@ -523,15 +523,15 @@ ________________________________________________________________________________
             
         3.3.4 No overriding for extension functions
         
-            You can't overryde an extension function. 
+            You can't override an extension function. 
             
             -> example10
             -> example11
             
             The extension function is resolved statically.
             
-            If the class has a member function with the same signature as an extension function, the member function always
-            takes precedence.
+            If the class has a member function with the same signature as an extension function, the member function 
+            always takes precedence.
             
         3.3.5 Extension properties
         
@@ -556,7 +556,7 @@ ________________________________________________________________________________
             IDE will show you all the possible functions available for that type of object. The list includes both 
             regular methods and extension functions.
             
-        3.4.2 Varargs: functions that accept an arbinaty number of arguments
+        3.4.2 Varargs: functions that accept an arbinary number of arguments
         
             When you call a function to create a list, you can pass any number of argument to it.
             
@@ -566,22 +566,22 @@ ________________________________________________________________________________
             
                 |   fun listOf<T>(vararg values: T): List<T> { ... }
                 
-            Insteaf of threee dots after the type in Java, Kotlin uses the "vararg" modifier on the parameter.
-            Kotlin requires you to explicitly unpack the array when you callint the functions and the argument you need
+            Instead of three dots after the type in Java, Kotlin uses the "vararg" modifier on the parameter.
+            Kotlin requires you to explicitly unpack the array when you calling the functions and the argument you need
             to pass are already packed in the array. This feature is called using a "spread operator". It's as simple as
-            putting the * character befire the corresponding argument.
+            putting the * character before the corresponding argument.
             
             -> example12
             
         3.4.3 Working with pairs: infix calls and destructuring declarations
         
-            The word "to" (when you create a map) isn't a build-in construct, but reather a method invocation of a 
-            special kind called an "infix call". In an infix call, the method name is places immediately between the 
+            The word "to" (when you create a map) isn't a build-in construct, but rather a method invocation of a 
+            special kind called an "infix call". In an infix call, the method name is placed immediately between the 
             target object name and the parameter, with no extra separator. 
-                |   1.to("one)
-                |   1 to "one
+                |   1.to("one")
+                |   1 to "one"
             Infix calls can be used with regular methods and extension functions that have one required parameter. The 
-            "to" function return an instance of "Pair", which is a Kotlin standart library class that represent a pair
+            "to" function return an instance of "Pair", which is a Kotlin standard library class that represent a pair
             of element. You can assign a pair of elements to two variables directly
                 |   val (number, name) = 1 to "one"
             This feature is called a "destructing declaration". You can assign a map entry to two separate variables,
@@ -595,7 +595,7 @@ ________________________________________________________________________________
                 
     3.5 Working with strings and regular expressions
     
-        Kotlin strings are exactly the same things as Java strings. Kotlin makes working with standart Java strings more
+        Kotlin strings are exactly the same things as Java strings. Kotlin makes working with standard Java strings more
         enjoyable by providing a bunch of useful extension functions. 
         
         3.5.1 Splitting strings
@@ -626,7 +626,7 @@ ________________________________________________________________________________
             Triple-quoted strings is not only to avoid escaping characters. Such a string literal can contain any 
             characters, including line breaks.
             
-            -> example15
+            -> example14
             
             The multiple string contains all the characters between the triple quotes, including indents used to format 
             code. 
@@ -634,7 +634,7 @@ ________________________________________________________________________________
             The triple-quoted string contains line breaks, but you can't use special characters like "\n". On the other 
             hand, you don't have to escape "\", so the Windows-style path can be written as 
             
-            -> example14
+            -> example15
             
             You can use templates in multiline strings. Because multiline strings don't support escape sequences, you 
             have to use an embedded expression if you need to use a literal dollar sign in the contents of your string.
@@ -651,12 +651,12 @@ ________________________________________________________________________________
         
         -> example16.saveUser1()
         
-        Field validation is duplicated. If you put the validation code into a locak function, you can get trip of the 
+        Field validation is duplicated. If you put the validation code into a local function, you can get trip of the 
         duplication and still maintain a clear code structure. 
         
         -> example16.saveUser2()
         
-        Local functions have access to all parameters and veriables of the enclosing function.
+        Local functions have access to all parameters and variables of the enclosing function.
         
         -> example16.saveUser3()
         
