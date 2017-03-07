@@ -5,10 +5,10 @@
 Chapter 2: Kotlin Basics
 
     This chapter covers:
-        * Declaring functions, variables, classes, enums ant properties
+        * Declaring functions, variables, classes, enums and properties
         * Control structures in Kotlin
         * Smart casts
-        * Throwing and handing exceptions
+        * Throwing and handling exceptions
 ________________________________________________________________________________________________________________________
 
     2.1 Basic elements: functions and variables
@@ -19,10 +19,10 @@ ________________________________________________________________________________
         
             * The "fun" keyword is used to declare a function
             * The parameter type is written after the parameter name
-            * The function can be declare at t he top level of a file
+            * The function can be declare at the top level of a file
             * Arrays are just classes
             * println() instead of System.out.println()
-            * You can omit the semicolon "";" from the end of a line
+            * You can omit the semicolon ";" from the end of a line
             
         2.1.2 Functions
         
@@ -69,7 +69,7 @@ ________________________________________________________________________________
         
             -> example4
         
-            Kotlin allows you to refer to local variables in string literals by putting the ""$" character in front of
+            Kotlin allows you to refer to local variables in string literals by putting the "$" character in front of
             the variable name. If you need to include the "$" character in a string, you escape it:
                 |   println("\$x")
             You can use more complex expressions as well. All it takes is putting curly braces around the expression.
@@ -79,14 +79,14 @@ ________________________________________________________________________________
     
         -> example5
     
-        Value object - Class of this type (containing only data but no code).
+        Value object - Class of this type containing only data but no code.
         In Kotlin "public" is the default visibility.
         
         2.2.1 Properties
         
             Properties - the combination of the field and its accessors.
             The concise declaration of the "Person" class hides the same underlying implementation as the original
-            Java code: its's a class with a private field that is initialized in the constructor and can be accessed
+            Java code: it's a class with a private field that is initialized in the constructor and can be accessed
             through the corresponding getter.
         
             Kotlin's "name" property is exposed to Java as a getter method called getName(). For Boolean properties, a
@@ -147,7 +147,7 @@ ________________________________________________________________________________
             Enum constants use the same constructor and property declaration syntax as you saw earlier for regular
             classes. When you declare each enum constant, you need to provide the property values for that constant.
         
-            If you define any methods in the enum class, the semicolon ":" separates the enum constant list from the
+            If you define any methods in the enum class, the semicolon ";" separates the enum constant list from the
             method definitions.
             
         2.3.2 Using "when" to deal with enum classes
@@ -173,7 +173,7 @@ ________________________________________________________________________________
         
             -> example9.mix()
         
-            An argument of the when expression can be any object.
+            An argument of the "when" expression can be any object.
                 |   when (setOf(color1, color2))
         
             Executed if none of the other branches were matched.
@@ -271,7 +271,7 @@ ________________________________________________________________________________
         
             Let's use integer ranges to play the Fizz-Buzz game. Players take turns counting incrementally, replacing
             any number divisible by three with the word "fizz" and any number divisible by five with the word "buzz". If
-            a number ia a multiple of both three and five, you say "FizzBuzz".
+            a number is a multiple of both three and five, you say "FizzBuzz".
         
             -> example11.range1
         
@@ -297,7 +297,7 @@ ________________________________________________________________________________
             "get()" and "put()", you can use to read values
                 |   map[key]
             and to set them
-                |   map[ey] = value
+                |   map[key] = value
         
             You can use the same unpacking syntax to iterate over a collection while keeping track of the index of the
             current item. You don't need to create a separate variable to store the index and increment it by hand.
@@ -318,7 +318,7 @@ ________________________________________________________________________________
             You can combine multiple ranges.
                 |   in 'a'.. 'z', in 'A' .. 'Z' -> "It's a letter!"
         
-            If you have any class that supports comparing instances. you can create ranges of objects of that type. If
+            If you have any class that supports comparing instances, you can create ranges of objects of that type. If
             you have such a range, you can't enumerate all objects in the range. But you can still check whether another
             object belong to the range, using the "in" operator. The same "in" check works with collections as well.
                 |   "Kotlin" in setOf("Java", "Scala")
@@ -327,7 +327,7 @@ ________________________________________________________________________________
     2.5 Exception in Kotlin
     
         A function can complete in a normal way or throw an exception if an error occurs. The function caller can catch
-        this exception and process if; if it doesn't, the exception is rethrown further up the stack.
+        this exception and process it; if it doesn't, the exception is rethrown further up the stack.
     
         Unlike in Java, in Kotlin the "throw" construct is an expression and can be used as a part of other expressions.
         
@@ -723,3 +723,7 @@ ________________________________________________________________________________
                     
             If you need to invoke one inherited implementation
                 |   override fun showOff() = super<Clickable>.showOff()
+                
+        4.1.2 Open, final, and abstract modifiers: final by default
+        
+            
